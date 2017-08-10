@@ -1,6 +1,6 @@
-# my-project
+# hello-vue
 
-> A Vue.js project
+> 初めての Vue.js
 
 ## Build Setup
 
