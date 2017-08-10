@@ -1,15 +1,27 @@
 <template>
   <div>
     <myheader></myheader>
-    <p v-if="msg.length > 0">
-      {{msg}}
-    </p>
-    <p v-else>
-      no text
-    </p>
-    <input type="text" v-model="msg">
-    <button @click="clear()">clear</button>
-    <button @click="get()">Get</button>
+    <div class="container-fluid">
+      <h1>初めての Vue.js</h1>
+      <p v-if="msg.length > 0">
+        {{msg}}
+      </p>
+      <p v-else>
+        no text
+      </p>
+      <div class="input-group">
+        <span class="input-group-addon">Select</span>
+        <input class="form-control" type="text" v-model="msg">
+        <span class="input-group-btn">
+        <button class="btn btn-default" @click="clear()">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span> clear
+        </button>
+        <button class="btn btn-default" @click="get()">
+          <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Get
+        </button>
+      </span>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -23,16 +35,16 @@
     components: {
       myheader
     },
-    data () {
+    data: function () {
       return {
         msg: 'Hello World!'
       }
     },
     methods: {
-      clear () {
+      clear: function () {
         this.msg = ''
       },
-      get () {
+      get: function () {
         //const that = this
         const postalCodeLookup = 'http://www.geonames.org/postalCodeLookupJSON?postalcode=10504&country=US'
         axios.get(postalCodeLookup)
@@ -48,7 +60,9 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   h1, h2 {
-    font-weight: normal;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, "Arial", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+    font-weight: 300;
+    line-height: 1.2;
   }
 
   ul {
