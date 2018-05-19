@@ -6,8 +6,6 @@
     <child1 ref="child1"></child1>
     <hr>
     <router-view name="child2"></router-view>
-    <hr>
-    <router-view></router-view>
   </div>
 </template>
 
