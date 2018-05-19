@@ -2,10 +2,11 @@
   <div id="parent">
     <h1>Parent</h1>
     <button @click="$refs.child1.print()">Child1のメソッド呼出</button>
+    <button @click="$refs.child2.print()">Child2のメソッド呼出</button>
     <hr>
     <child1 ref="child1"></child1>
     <hr>
-    <router-view name="child2"></router-view>
+    <router-view name="child2" ref="child2"></router-view>
   </div>
 </template>
 

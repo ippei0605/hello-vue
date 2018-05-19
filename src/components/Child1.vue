@@ -1,6 +1,7 @@
 <template>
   <div id="child1">
     <h1>Child1</h1>
+    <button @click="print()">メソッド呼出</button>
   </div>
 </template>
 
@@ -9,7 +10,7 @@
     name: 'child1',
     methods: {
       print () {
-        console.log('printメソッドを実行した。');
+        console.log('child1のprintメソッドを実行した。');
       }
     }
   };
