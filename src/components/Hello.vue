@@ -28,8 +28,8 @@
 <script>
   /* eslint-disable spaced-comment */
 
-  import myheader from './myheader'
-  import axios from 'axios'
+  import myheader from './myheader';
+  import axios from 'axios';
 
   export default {
     components: {
@@ -38,22 +38,22 @@
     data: function () {
       return {
         msg: 'Hello World!'
-      }
+      };
     },
     methods: {
       clear: function () {
-        this.msg = ''
+        this.msg = '';
       },
       get: function () {
         //const that = this
-        const postalCodeLookup = 'http://www.geonames.org/postalCodeLookupJSON?postalcode=10504&country=US'
+        const postalCodeLookup = 'http://www.geonames.org/postalCodeLookupJSON?postalcode=10504&country=US';
         axios.get(postalCodeLookup)
           .then((response) => {
-            this.msg = response.data.postalcodes[0].adminName1
-          })
+            this.msg = response.data.postalcodes[0].adminName1;
+          });
       }
     }
-  }
+  };
 </script>
 
 
